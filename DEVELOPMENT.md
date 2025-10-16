@@ -8,8 +8,8 @@ This document is for developers, providing development environment setup, archit
 
 ### 必需软件 / Required Software
 
-- **Node.js**: >= 14.x (推荐 LTS 版本)
-- **npm**: >= 6.x 或 **yarn**: >= 1.x
+- **Node.js**: >= 18.x (推荐 LTS 版本)
+- **npm**: >= 9.x 或 **yarn**: >= 1.22.x
 - **Git**: >= 2.x
 - **代码编辑器**: VS Code (推荐) / WebStorm / 其他
 
