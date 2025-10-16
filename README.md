@@ -43,9 +43,9 @@ Unplug is a digital wellness application designed for young people, helping user
 ## 技术架构 / Technical Architecture
 
 ### 前端 / Frontend
-- React / Vue.js - 跨平台Web应用
-- React Native / Flutter - 移动端应用
-- Electron - 桌面端应用
+- React - 跨平台Web应用
+- React Native - 移动端应用
+- Electron (基于 React) - 桌面端应用
 
 ### 后端 / Backend
 - Node.js / Python - API服务器
