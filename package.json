@@ -1,0 +1,111 @@
+{
+  "name": "unplug",
+  "version": "0.1.0",
+  "description": "帮助青年人摆脱网瘾，重置生活状态 / Helping young people overcome internet addiction and reset their lives",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:web": "npm run dev --workspace=packages/web",
+    "dev:server": "npm run dev --workspace=packages/server",
+    "dev:mobile": "npm run dev --workspace=packages/mobile",
+    "dev:desktop": "npm run dev --workspace=packages/desktop",
+    "build": "npm-run-all build:*",
+    "build:web": "npm run build --workspace=packages/web",
+    "build:server": "npm run build --workspace=packages/server",
+    "build:mobile": "npm run build --workspace=packages/mobile",
+    "build:desktop": "npm run build --workspace=packages/desktop",
+    "test": "npm-run-all test:*",
+    "test:unit": "jest --testPathPattern=tests/unit",
+    "test:integration": "jest --testPathPattern=tests/integration",
+    "test:e2e": "playwright test",
+    "test:coverage": "jest --coverage",
+    "lint": "npm-run-all lint:*",
+    "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:style": "stylelint \"**/*.{css,scss}\"",
+    "lint:fix": "npm-run-all lint:js:fix lint:style:fix",
+    "lint:js:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "lint:style:fix": "stylelint \"**/*.{css,scss}\" --fix",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "clean": "npm-run-all clean:*",
+    "clean:deps": "rimraf node_modules packages/*/node_modules",
+    "clean:build": "rimraf packages/*/dist packages/*/build",
+    "prepare": "husky install",
+    "postinstall": "npm run setup",
+    "setup": "echo 'Setting up development environment...' && npm run check-requirements",
+    "check-requirements": "node scripts/check-requirements.js || true"
+  },
+  "keywords": [
+    "digital-wellness",
+    "internet-addiction",
+    "productivity",
+    "focus",
+    "screen-time",
+    "mental-health",
+    "youth",
+    "self-control"
+  ],
+  "author": {
+    "name": "Unplug Team",
+    "email": "team@unplug.app",
+    "url": "https://unplug.app"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shy-06/Unplug.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Shy-06/Unplug/issues"
+  },
+  "homepage": "https://unplug.app",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-jsx-a11y": "^6.7.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "jest": "^29.6.0",
+    "lint-staged": "^14.0.0",
+    "npm-run-all": "^4.1.5",
+    "playwright": "^1.37.0",
+    "prettier": "^3.0.0",
+    "stylelint": "^15.10.0",
+    "stylelint-config-standard": "^34.0.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.2.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,scss}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "contributors": [
+    {
+      "name": "Contributors",
+      "url": "https://github.com/Shy-06/Unplug/graphs/contributors"
+    }
+  ]
+}
