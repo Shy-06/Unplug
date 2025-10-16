@@ -60,8 +60,8 @@ Unplug is a digital wellness application designed for young people, helping user
 ## 快速开始 / Quick Start
 
 ### 环境要求 / Prerequisites
-- Node.js >= 14.x
-- npm >= 6.x 或 yarn >= 1.x
+- Node.js >= 18.x
+- npm >= 9.x
 
 ### 安装步骤 / Installation
 
