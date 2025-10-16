@@ -3,11 +3,14 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
+yarn.lock
 
 # Build outputs
 dist/
 build/
 *.log
+logs/
 
 # Environment variables
 .env
@@ -35,3 +38,12 @@ temp/
 
 # Operating System
 Thumbs.db
+
+# PWA generated files
+packages/web/dev-dist/
+packages/web/sw.js
+packages/web/workbox-*.js
+
+# Database
+*.db
+*.sqlite
