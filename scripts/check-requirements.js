@@ -81,11 +81,11 @@ async function checkRequirements() {
   if (commandExists('node')) {
     const nodeVersion = getVersion('node');
     const version = extractVersion(nodeVersion);
-    if (version && compareVersions(version, '14.0.0') >= 0) {
+    if (version && compareVersions(version, '18.0.0') >= 0) {
       success(`Node.js: ${nodeVersion}`);
     } else {
-      error(`Node.js version ${version} is too old. Required: >= 14.0.0`);
-      issues.push('升级 Node.js 到 14.0.0 或更高版本 / Upgrade Node.js to 14.0.0 or higher');
+      error(`Node.js version ${version} is too old. Required: >= 18.0.0`);
+      issues.push('升级 Node.js 到 18.0.0 或更高版本 / Upgrade Node.js to 18.0.0 or higher');
       allChecksPassed = false;
     }
   } else {
