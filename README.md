@@ -75,6 +75,11 @@ cd Unplug
 # 安装依赖 / Install dependencies
 npm install
 
+# ⚠️ 注意 / Note
+# 当前仓库未包含实际的 workspace 包（即没有子目录下的 package.json），
+# 因此直接运行 `npm run dev`（该命令会尝试在各个 workspace 下运行 dev:* 脚本）会失败。
+# 请在运行 `npm run dev` 之前，先根据需要在各个 workspace 目录下创建 package.json 文件，
+# 或仅运行当前可用的脚本。
 # 启动开发服务器 / Start development server
 npm run dev
 ```
