@@ -48,6 +48,13 @@ npm install
 
 ### 第四步：开始开发 / Step 4: Start Development
 
+> ⚠️ **注意 / Note:**  
+> 如果 `packages` 目录及其子目录（如 `web`、`server`、`mobile`）尚未创建，请先运行以下命令进行初始化：  
+> If the `packages` directory and its subdirectories (such as `web`, `server`, `mobile`) do not exist yet, please scaffold them first:
+>
+> ```bash
+> mkdir -p packages/web packages/server packages/mobile
+> ```
 ```bash
 # 启动所有服务 / Start all services
 npm run dev
