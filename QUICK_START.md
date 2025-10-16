@@ -49,11 +49,14 @@ npm install
 ### 第四步：开始开发 / Step 4: Start Development
 
 > ⚠️ **注意 / Note:**  
-> 如果 `packages` 目录及其子目录（如 `web`、`server`、`mobile`）尚未创建，请先运行以下命令进行初始化：  
-> If the `packages` directory and its subdirectories (such as `web`, `server`, `mobile`) do not exist yet, please scaffold them first:
+> 如果 `packages` 目录及其子目录（如 `web`、`server`、`mobile`）尚未创建，请先运行以下命令进行初始化，并为每个子目录添加最小的 `package.json` 文件：  
+> If the `packages` directory and its subdirectories (such as `web`, `server`, `mobile`) do not exist yet, please scaffold them first and add a minimal `package.json` to each:
 >
 > ```bash
 > mkdir -p packages/web packages/server packages/mobile
+> echo '{ "name": "web", "version": "0.1.0" }' > packages/web/package.json
+> echo '{ "name": "server", "version": "0.1.0" }' > packages/server/package.json
+> echo '{ "name": "mobile", "version": "0.1.0" }' > packages/mobile/package.json
 > ```
 ```bash
 # 启动所有服务 / Start all services
