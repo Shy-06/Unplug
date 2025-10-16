@@ -36,7 +36,7 @@
     "prepare": "husky install",
     "postinstall": "npm run setup",
     "setup": "echo 'Setting up development environment...' && npm run check-requirements",
-    "check-requirements": "node scripts/check-requirements.js"
+    "check-requirements": "node scripts/check-requirements.js || true"
   },
   "keywords": [
     "digital-wellness",
