@@ -63,7 +63,7 @@ function compareVersions(version, required) {
 
 // Extract version number from version string
 function extractVersion(versionStr) {
-  const match = versionStr.match(/(\d+\.\d+\.\d+)/);
+  const match = versionStr.match(/(\d+\.\d+(?:\.\d+)?)/);
   return match ? match[1] : null;
 }
 
