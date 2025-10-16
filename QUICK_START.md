@@ -35,8 +35,8 @@ node scripts/check-requirements.js
 
 这将检查：
 This will check:
-- ✅ Node.js (>= 14.0.0)
-- ✅ npm (>= 6.0.0)
+- ✅ Node.js (>= 18.0.0)
+- ✅ npm (>= 9.0.0)
 - ✅ Git
 - ✅ 项目文件结构 / Project structure
 
